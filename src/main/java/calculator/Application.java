@@ -18,7 +18,7 @@ public class Application {
         String[] numbers;
 
         if (str.isEmpty()) {
-
+            return 0;
         }
 
         if (Character.isDigit(str.charAt(0))) {//기본 구분자
