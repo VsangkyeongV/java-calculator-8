@@ -19,6 +19,23 @@ public class Application {
                 sum += num;
             }
         }
+        
+        if (str.startsWith("//")) {
+            System.out.println(str.indexOf("\\n"));
+            
+            String customString = str.substring(2, str.indexOf("\\n"));
+            
+            System.out.println("customString: " + customString);
+            
+            String numString = str.substring(str.indexOf("\\n") + 2);
+            System.out.println("numString: " + numString);
+            String[] numbers = numString.split("["+customString+"]");
+            
+            for (String number : numbers) {
+                int num = Integer.parseInt(number);
+                sum += num;
+            }
+        }
 
         return sum;
     }
